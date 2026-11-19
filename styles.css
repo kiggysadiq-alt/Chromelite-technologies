@@ -1,0 +1,356 @@
+
+
+:root {
+
+    /* Main Colours */
+
+    --primary-colour: #C00000;
+    --secondary-colour: #000000;
+    --accent-colour: #800000;
+
+    /* Neutral Colours */
+
+    --white-colour: #FFFFFF;
+    --light-grey: #D3D3D3;
+    --very-light-grey: #F5F5F5;
+
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: var(--very-light-grey);
+
+    color: var(--secondary-colour);
+
+}
+
+
+
+
+#navbar {
+
+    background-color: var(--secondary-colour);
+
+    color: var(--white-colour);
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-bottom: 5px solid var(--primary-colour);
+
+}
+
+
+#navbar h1 {
+
+    color: var(--white-colour);
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    list-style: none;
+
+    gap: 25px;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.nav-links a {
+
+    color: var(--white-colour);
+
+    text-decoration: none;
+
+    padding: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+/* Navigation Hover Effect */
+
+.nav-links a:hover {
+
+    background-color: var(--primary-colour);
+
+    color: var(--white-colour);
+
+    border-radius: 5px;
+
+}
+
+
+
+#content-container {
+
+    display: flex;
+
+    gap: 5%;
+
+    padding: 20px;
+
+}
+
+
+
+
+#sidebar {
+
+    width: 25%;
+
+    background-color: var(--light-grey);
+
+    padding: 20px;
+
+    border-left: 5px solid var(--primary-colour);
+
+}
+
+
+#sidebar h3 {
+
+    color: var(--accent-colour);
+
+}
+
+
+
+.quick-link {
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    background-color: var(--white-colour);
+
+    border-radius: 5px;
+
+}
+
+
+.quick-link a {
+
+    color: var(--secondary-colour);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.quick-link a:hover {
+
+    color: var(--primary-colour);
+
+}
+
+
+
+
+#main-content {
+
+    width: 70%;
+
+    background-color: var(--white-colour);
+
+    padding: 20px;
+
+}
+
+
+#main-content h2 {
+
+    color: var(--primary-colour);
+
+    border-bottom: 2px solid var(--light-grey);
+
+    padding-bottom: 10px;
+
+}
+
+
+/* Individual Content Sections */
+
+#home,
+#about-us,
+#our-services,
+#our-projects,
+#contact-us {
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    background-color: var(--white-colour);
+
+}
+
+
+
+
+.services-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+
+/* Individual Service Cards */
+
+.service-card {
+
+    flex: 1 1 200px;
+
+    background-color: var(--very-light-grey);
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    border-left: 5px solid var(--primary-colour);
+
+    transition: 0.3s;
+
+}
+
+
+.service-card h3 {
+
+    color: var(--accent-colour);
+
+}
+
+
+.service-card:hover {
+
+    background-color: var(--light-grey);
+
+    transform: translateY(-5px);
+
+}
+
+
+
+
+#contact-us a {
+
+    color: var(--primary-colour);
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+#contact-us a:hover {
+
+    color: var(--accent-colour);
+
+    text-decoration: underline;
+
+}
+
+
+
+
+#footer {
+
+    width: 100%;
+
+    background-color: var(--secondary-colour);
+
+    color: var(--white-colour);
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 5px solid var(--primary-colour);
+
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 767px) {
+
+
+    /* Stack Main Content and Sidebar */
+
+    #content-container {
+
+        flex-direction: column-reverse;
+
+        gap: 20px;
+
+    }
+
+
+    /* Make Both Sections Full Width */
+
+    #sidebar,
+    #main-content {
+
+        width: 100%;
+
+    }
+
+
+    /* Responsive Navigation */
+
+    .nav-links {
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+    }
+
+
+    /* Responsive Service Cards */
+
+    .service-card {
+
+        flex: 1 1 100%;
+
+    }
+
+
+}
